@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show me your love</title>
+    <style>
+        body{
+            border: 10px solid black;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: rgba(8, 23, 23, 0.234);
+            text-align: center;
+            margin: 5%;
+            
+            
+        }
+        .container p {
+           text-align: left;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 300;
+        }
+        .container form{
+         
+            padding: 0.5%;
+            margin-top: 2%;
+        }
+        .container form input{
+            padding: 0.5%;
+            font-size: 15px;
+            margin: 1%;
+            border-radius: 10px;
+            text-align: center;background-color: rgb(236, 232, 240);
+        }
+        .content{
+            background-color: blue;
+            padding: 5%;
+            color: white;
+        }
+       
+       
+        .submit input:hover{
+            background-color: rgb(166, 166, 210);
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        @media screen and (max-width:800px) 
+        {
+           .container p {
+                             text-align: center;
+                             font-size: 18px;
+                             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                             font-weight: bold;
+                             height: 10vh;
+        } 
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+        <p>well! I am searching a partner....</p>
+        <p>this page is to know that, who is perfect for me!</p>
+        <p>If you think you are the one, kindly give me your details! so that i can match your profile with me.</p>
+        <p>make sure if you are lucky i will directly call you at any time be ready and sure about yourself</p>
+        <p>fill below form:</p>
+        </div>
+        <hr>
+        <form action="/index.hbs" method="POST">
+        <h3>DETAILS !</h3>
+            <div class="box">
+                <input type="text" placeholder="FName" id="fn" required name="firstname">
+                <input type="text" placeholder="LName" id="ln" required name="lastname">
+            </div>
+            <div class="box">
+                <input type="email" placeholder="Enter your email" id="em" required name="email">
+                <input type="number" required placeholder="Mnumber" id="nu" name="number">
+            </div>
+            
+            <div class="submit">
+                <input type="submit" value="Submit" onclick="validation()">
+            </div>
+        </form>
+
+    </div>
+    <script type="text/javascript">
+        function validation() {
+            var N, E, P, B;
+            N = document.getElementById('fn').value;
+            B = document.getElementById('ln').value;
+            E = document.getElementById('em').value;
+            P = document.getElementById('nu').value;
+          
+            if (N == '' || E == '' || P == '' || B == '')
+                alert("Please fill all the details for Registration ");
+            else
+                alert("Successfully Registered");
+
+
+
+        }
+    </script>
+</body>
+</html>

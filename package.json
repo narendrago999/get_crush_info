@@ -1,0 +1,24 @@
+{
+  "name": "naren",
+  "version": "1.0.0",
+  "description": "this is insta post",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js -e js,hbs"
+  },
+  "keywords": [
+    "naren"
+  ],
+  "author": "narendra",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "hbs": "^4.2.0",
+    "html": "^1.0.0",
+    "mongoose": "^6.5.1",
+    "nodemon": "^2.0.19",
+    "path": "^0.12.7",
+    "stringify": "^5.2.0"
+  }
+}
